@@ -45,7 +45,11 @@ describe('Storage set item', () => {
   });
   test('should set item correctly', async () => {
     await storage.recordToTablePoint('test-player', 10);
+    await storage.recordToTablePoint('test-player2', 20);
     const result = await storage.getTablePoint();
-    expect(result).toEqual([{playerName: 'test-player', score: 10}]);
+    expect(result).toEqual([
+      {playerName: 'test-player', score: 10},
+      {playerName: 'test-player2', score: 20},
+    ]);
   });
 });
