@@ -39,7 +39,6 @@ describe('Redux random question utils createRandomQuestion', () => {
     expect(question).not.toEqual(dataQuestions.slice(0, 20));
     expect(question2).not.toEqual(dataQuestions.slice(0, 20));
     expect(question3).not.toEqual(dataQuestions.slice(0, 20));
-    console.log(question, 'question-set-1');
   });
   test('should return shuffled array of choices correctly', () => {
     const questions = utils.createRandomQuestion();
