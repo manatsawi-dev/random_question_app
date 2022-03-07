@@ -52,7 +52,8 @@ describe('Views screen', () => {
     expect(safeArea).not.toBeNull();
     expect(scrollView).not.toBeNull();
     expect(containerView).not.toBeNull();
-    expect(children.props.children).toBe('Children Test');
-    expect(children2.props.children).toBe('Children Test2');
+    expect(children?.props.children).toBe('Children Test');
+    expect(children2?.props.children).toBe('Children Test2');
+    expect(children).toHaveTextContent('Children Test');
   });
 });

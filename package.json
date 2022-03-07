@@ -59,6 +59,9 @@
     ],
     "setupFiles": [
       "./setup-test.js"
+    ],
+    "setupFilesAfterEnv": [
+      "./setup-test.ts"
     ]
   }
 }
