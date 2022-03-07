@@ -1,8 +1,15 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
+import ScreenView from '../../views/screen';
 
 const LeaderBoardScreen = () => {
-  return <View />;
+  return (
+    <ScreenView>
+      <View>
+        <Text>Test Driven</Text>
+      </View>
+    </ScreenView>
+  );
 };
 
 export default LeaderBoardScreen;
