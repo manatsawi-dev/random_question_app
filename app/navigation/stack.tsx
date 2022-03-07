@@ -10,7 +10,10 @@ const Stack = createNativeStackNavigator();
 const StackNavigation = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}>
         <Stack.Screen
           name={ROUTES.LEADER_BOARD.path}
           component={LeaderBoardScreen}

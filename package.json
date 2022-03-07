@@ -57,10 +57,8 @@
       "json",
       "node"
     ],
-    "setupFiles": [
-      "./setup-test.js"
-    ],
     "setupFilesAfterEnv": [
+      "./setup-test.js",
       "./setup-test.ts"
     ]
   }

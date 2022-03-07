@@ -12,7 +12,7 @@ const ScreenView = (props: Props) => {
 
   if (disabledScroll) {
     return (
-      <SafeAreaView testID="screen.safeArea">
+      <SafeAreaView testID="screen.safeArea" style={styles.safeArea}>
         <View testID="screen.containerView" style={styles.container}>
           {children}
         </View>
@@ -21,8 +21,11 @@ const ScreenView = (props: Props) => {
   }
 
   return (
-    <SafeAreaView testID="screen.safeArea">
-      <ScrollView testID="screen.scrollView" contentInsetAdjustmentBehavior="automatic" style={styles.scrollView}>
+    <SafeAreaView testID="screen.safeArea" style={styles.safeArea}>
+      <ScrollView
+        testID="screen.scrollView"
+        contentInsetAdjustmentBehavior="automatic"
+        contentContainerStyle={styles.scrollView}>
         <View testID="screen.containerView" style={styles.container}>
           {children}
         </View>
