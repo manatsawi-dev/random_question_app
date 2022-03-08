@@ -16,7 +16,7 @@ export const createChoices = (ans: string, listBaseChoice: string[]): string[] =
   return choices;
 };
 
-export const createRandomQuestion = (): I.questions[] => {
+export const createRandomQuestion = (): I.Questions[] => {
   const keysBaseQuestion = keyBy(dataQuestions, 'id');
   const shuffledQuestion = shuffle(dataQuestions).slice(0, 20);
   const shuffledAnswer = shuffledQuestion.map(item => {

@@ -14,7 +14,7 @@ const ScreenView = (props: Props) => {
   if (disabledScroll) {
     return (
       <SafeAreaView testID="screen.safeArea" style={styles.safeArea}>
-        <View testID="screen.containerView" style={styles.container}>
+        <View testID="screen.containerView" style={styles.containerFullHeight}>
           {children}
         </View>
       </SafeAreaView>
@@ -29,6 +29,7 @@ const ScreenView = (props: Props) => {
         contentContainerStyle={styles.scrollView}
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
+        scrollEventThrottle={150}
         onScroll={scrollEvent => {
           if (onScroll) {
             onScroll(scrollEvent);

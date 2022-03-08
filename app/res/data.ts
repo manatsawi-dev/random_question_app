@@ -1,6 +1,6 @@
 import * as I from '../Interface';
 
-const dataQuestions: I.questions[] = [
+const dataQuestions: I.Questions[] = [
   {
     id: 1,
     question: 'Which animal is known as the "Ship of the Desert"?',

@@ -13,7 +13,8 @@ const StackNavigation = () => {
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
-        }}>
+        }}
+        initialRouteName={ROUTES.LEADER_BOARD.path}>
         <Stack.Screen
           name={ROUTES.LEADER_BOARD.path}
           component={LeaderBoardScreen}

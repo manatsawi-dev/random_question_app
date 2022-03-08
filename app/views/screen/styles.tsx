@@ -7,6 +7,12 @@ const Styles = StyleSheet.create({
     backgroundColor: colors.backgrounds[0],
     padding: 16,
   },
+  containerFullHeight: {
+    flex: 1,
+    backgroundColor: colors.backgrounds[0],
+    padding: 16,
+    height: '100%',
+  },
   scrollView: {
     height: '100%',
   },

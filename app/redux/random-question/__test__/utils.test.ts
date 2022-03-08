@@ -41,9 +41,9 @@ describe('Redux random question utils createRandomQuestion', () => {
     expect(question3).not.toEqual(dataQuestions.slice(0, 20));
   });
   test('should return shuffled array of choices correctly', () => {
-    const questions = utils.createRandomQuestion();
+    const Questions = utils.createRandomQuestion();
     const keysBaseQuestion = keyBy(dataQuestions, 'id');
-    questions.forEach(question => {
+    Questions.forEach(question => {
       const baseQuestion = keysBaseQuestion[question.id];
       if (baseQuestion) {
         expect(question.choices.length).toEqual(4);

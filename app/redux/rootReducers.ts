@@ -1,8 +1,9 @@
 import {combineReducers} from 'redux';
-import {questionReducer} from './random-question/reducers';
+import {questionReducer, tableScoreReducer} from './random-question/reducers';
 
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
   question: questionReducer,
+  tableScore: tableScoreReducer,
 });
 
-export default rootReducer;
+export type RootState = ReturnType<typeof rootReducer>;
