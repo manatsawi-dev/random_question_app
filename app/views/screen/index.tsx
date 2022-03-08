@@ -1,14 +1,15 @@
 import React from 'react';
-import {View, SafeAreaView, ScrollView} from 'react-native';
+import {View, SafeAreaView, ScrollView, NativeSyntheticEvent, NativeScrollEvent} from 'react-native';
 import styles from './styles';
 
 interface Props {
   disabledScroll?: boolean;
   children?: React.ReactNode;
+  onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
 }
 
 const ScreenView = (props: Props) => {
-  const {children, disabledScroll} = props;
+  const {children, disabledScroll, onScroll} = props;
 
   if (disabledScroll) {
     return (
@@ -25,7 +26,14 @@ const ScreenView = (props: Props) => {
       <ScrollView
         testID="screen.scrollView"
         contentInsetAdjustmentBehavior="automatic"
-        contentContainerStyle={styles.scrollView}>
+        contentContainerStyle={styles.scrollView}
+        showsVerticalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}
+        onScroll={scrollEvent => {
+          if (onScroll) {
+            onScroll(scrollEvent);
+          }
+        }}>
         <View testID="screen.containerView" style={styles.container}>
           {children}
         </View>
