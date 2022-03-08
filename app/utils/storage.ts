@@ -30,7 +30,13 @@ export const recordToTablePoint = async (playerName: string, score: number): Pro
     let tablePoint: Array<RowPoint> = JSON.parse(tablePointJSON);
     const newRecord: RowPoint = {playerName, score};
     if (Array.isArray(tablePoint)) {
-      tablePoint.push(newRecord);
+      const playerRowIndex = tablePoint.findIndex(a => a.playerName === playerName);
+      if (playerRowIndex < 0) {
+        tablePoint.push(newRecord);
+      } else {
+        const currentScore = tablePoint[playerRowIndex].score;
+        tablePoint[playerRowIndex] = {...newRecord, score: currentScore > score ? currentScore : score};
+      }
     } else {
       tablePoint = [{...newRecord}];
     }

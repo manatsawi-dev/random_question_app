@@ -22,7 +22,8 @@ const LeaderBoardScreen = () => {
       Alert.alert('Please enter your name');
       return;
     }
-    navigation.navigate(routes.QUIZ.path, {playerName: playerNameState});
+    dispatch(action.playNewRound(playerNameState));
+    navigation.navigate(routes.QUIZ.path);
   };
 
   const onChangeText = (text: string): void => {

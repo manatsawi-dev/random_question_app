@@ -10,7 +10,7 @@ const TablePointView = () => {
 
   return (
     <View style={styles.container}>
-      {Array.isArray(leaderBoardState && leaderBoardState.length) ? (
+      {Array.isArray(leaderBoardState) && leaderBoardState.length ? (
         <View style={styles.rowHeader}>
           <Typography testID="LeaderBoardScreen.View.TitleName" level={3} style={styles.textTitle}>
             Player Name

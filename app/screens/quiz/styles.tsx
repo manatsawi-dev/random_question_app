@@ -7,18 +7,47 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   sectionHeader: {},
-  sectionBoard: {
+  sectionCenter: {
     flex: 1,
     height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   sectionBottom: {
     display: 'flex',
-    justifyContent: 'flex-end',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
     marginTop: 16,
-    height: 100,
+    height: 60,
+  },
+  countTimer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 100,
+    height: 60,
+    width: 60,
+    borderWidth: 1,
+    borderColor: 'white',
   },
   textLeader: {
     marginBottom: 20,
+  },
+  btn1: {
+    marginTop: 30,
+    borderWidth: 1,
+    borderColor: 'white',
+    borderRadius: 8,
+    width: 250,
+  },
+  btn2: {
+    marginVertical: 10,
+    marginTop: 20,
+    borderWidth: 1,
+    borderColor: 'white',
+    borderRadius: 8,
+    width: 250,
   },
 });
 
